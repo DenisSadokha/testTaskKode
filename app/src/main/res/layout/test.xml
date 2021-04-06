@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rec" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:src="@drawable/points" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_button" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvCityFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/jview"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="17dp"
+                    android:text="Барнаул"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCityFrom"
+                    android:layout_alignStart="@+id/jview"
+                    android:layout_marginTop="3dp"
+                    android:text="Все аэропорты"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                </Button>
+
+
+                <Button
+                    android:id="@+id/btnTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                </Button>
+
+                <TextView
+                    android:id="@+id/tvCityTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnFrom"
+                    android:layout_alignStart="@+id/jview"
+                    android:layout_marginTop="14dp"
+                    android:text="Барнаул"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCityTo"
+                    android:layout_alignStart="@+id/jview"
+                    android:layout_marginTop="3dp"
+                    android:text="Все аэропорты"
+                    android:textSize="11sp" />
+
+                <View
+                    android:id="@+id/jview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_alignBottom="@+id/btnFrom"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="#8D7B7B7B" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/iBtnReverse"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/actionBarItemBackground"
+                android:src="@drawable/ic_icn_global_city_reverse" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#8D7B7B7B" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/nothingTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/btnChooseDateTo"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Туда"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDateTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nothingTo"
+                    android:layout_alignStart="@+id/nothingTo"
+                    android:layout_alignEnd="@+id/btnChooseDateTo"
+                    android:layout_marginTop="5dp"
+                    android:text="21 июл., ср"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnChooseDateTo"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground" />
+                <RelativeLayout
+                    android:id="@+id/viewGroupAddFrom"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/btnChooseDateTo">
+
+                <Button
+                    android:id="@+id/btnAddFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="#ffffff"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#1329A8"/>
+
+                    <TextView
+                        android:id="@+id/nothingFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/btnAddFrom"
+                        android:layout_alignTop="@+id/btnAddFrom"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="20dp"
+                        android:elevation="15dp"
+                        android:text="ОБРАТНО"
+                        android:textColor="#1329A8"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nothingFrom"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_toEndOf="@+id/nothingFrom"
+                    android:elevation="15dp"
+                    android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/viewGroupFrom"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/btnChooseDateTo">
+                <Button
+                    android:id="@+id/btnChooseDateFrom"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"/>
+
+                    <TextView
+                        android:id="@+id/tvNothingFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:text="Обратно" />
+
+                    <TextView
+                        android:id="@+id/tvDateFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvNothingFrom"
+                        android:layout_alignStart="@+id/tvNothingFrom"
+                        android:layout_alignEnd="@+id/btnChooseDateFrom"
+                        android:layout_marginTop="5dp"
+                        android:text="22 июл., ср"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/iBtnRemoveDateFrom"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toEndOf="@+id/btnChooseDateFrom"
+                        android:background="@android:color/transparent"
+                        android:foreground="?android:attr/actionBarItemBackground"
+                        android:src="@drawable/ic_close_cross_in_circular_outlined_interface_button"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#8D7B7B7B" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/iBtnIncBaby"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+            <TextView
+                android:textColor="#909191"
+                android:id="@+id/tvCountBaby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iBtnIncBaby"
+                android:layout_alignBottom="@+id/nothingImgBaby"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/nothingImgBaby"
+                android:text="0"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/nothingImgBaby"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_below="@+id/iBtnIncBaby"
+                android:layout_alignEnd="@+id/iBtnIncBaby"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_icn_booking_passenger_kid" />
+
+            <TextView
+                android:id="@+id/nothingVoz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nothingImgBaby"
+                android:layout_alignStart="@+id/tvCountBaby"
+                android:layout_marginTop="5dp"
+                android:text="2-12 лет"
+                android:textColor="#909191"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:clickable="false"
+
+                android:id="@+id/iBtnDecBaby"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/nothingVoz"
+                android:layout_alignStart="@+id/iBtnIncBaby"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/remove_unable" />
+
+            <ImageButton
+                android:id="@+id/iBtnIncMen"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="30dp"
+                android:layout_toStartOf="@+id/iBtnIncBaby"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+            <TextView
+                android:id="@+id/tvCountMen"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iBtnIncMen"
+                android:layout_alignBottom="@+id/nothingMen"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/nothingMen"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/nothingMen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iBtnIncMen"
+
+                android:layout_alignEnd="@+id/iBtnIncMen"
+                android:layout_alignBottom="@+id/tvCountBaby"
+                android:layout_marginTop="5dp"
+
+                android:src="@drawable/ic_icn_booking_passenger_adult" />
+
+            <TextView
+                android:id="@+id/nothingVz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tvCountMen"
+                android:layout_alignBottom="@+id/nothingVoz"
+                android:text="Взрослый"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:clickable="false"
+                android:id="@+id/iBtnDecMen"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignStart="@+id/iBtnIncMen"
+                android:layout_alignTop="@+id/iBtnDecBaby"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/remove_unable" />
+
+            <ImageButton
+                android:id="@+id/iBtnIncKid"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/iBtnIncBaby"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_baseline_add_circle_outline_24" />
+
+            <ImageView
+                android:id="@+id/nothingKid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iBtnIncKid"
+                android:layout_alignEnd="@+id/iBtnIncKid"
+                android:layout_alignBottom="@+id/nothingImgBaby"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_icn_booking_passenger_baby" />
+
+            <TextView
+                android:textColor="#909191"
+                android:id="@+id/tvCountKid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iBtnIncKid"
+                android:layout_alignBottom="@+id/nothingKid"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/nothingKid"
+                android:text="0"
+                android:textSize="25sp" />
+
+            <TextView
+
+                android:id="@+id/nothingDo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/iBtnDecBaby"
+                android:layout_alignStart="@+id/tvCountKid"
+                android:text="до 2-х лет"
+                android:textColor="#909191"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:clickable="false"
+                android:id="@+id/iBtnDecKid"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignStart="@+id/iBtnIncKid"
+                android:layout_alignTop="@+id/iBtnDecBaby"
+                android:background="@android:color/transparent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/remove_unable" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnFindTickets"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/round_button"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Найти рейсы"
+            android:textColor="#FFF"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
